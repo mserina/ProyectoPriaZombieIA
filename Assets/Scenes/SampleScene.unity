@@ -731,7 +731,43 @@ MonoBehaviour:
   treeTypes:
   - enabled: 1
     name: DemoSpruce
-    seed: 2122
+    seed: 80729
+    probability: 24.7
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks: []
+    instanceCount: 342
+    prefabs:
+    - index: 0
+      probability: 8
+      prefab: {fileID: 7488343770391138834, guid: d269f456157d06948a7ff3854fe78119, type: 3}
+    distance: 10.1
+    scaleRange: {x: 0.8, y: 1.2}
+    sinkAmount: 0
+  - enabled: 1
+    name: DemoBroadleaf
+    seed: 47450
+    probability: 22.9
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks: []
+    instanceCount: 1724
+    prefabs:
+    - index: 1
+      probability: 34
+      prefab: {fileID: 3419883363128097502, guid: ee761a3475b476040a2a6844b77eb15a, type: 3}
+    distance: 7.5
+    scaleRange: {x: 0.20266646, y: 0.60266644}
+    sinkAmount: 0
+  - enabled: 1
+    name: VegetationItem
+    seed: 4089
     probability: 10
     collisionCheck: 0
     rejectUnderwater: 0
@@ -739,15 +775,43 @@ MonoBehaviour:
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 2078
+    instanceCount: 0
     prefabs:
     - index: 0
       probability: 100
-      prefab: {fileID: 7488343770391138834, guid: d269f456157d06948a7ff3854fe78119, type: 3}
+      prefab: {fileID: 0}
     distance: 5
     scaleRange: {x: 0.8, y: 1.2}
     sinkAmount: 0
-  grassPrefabs: []
+  grassPrefabs:
+  - enabled: 1
+    name: VegetationItem
+    seed: 3616
+    probability: 25
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks: []
+    instanceCount: 0
+    index: 0
+    type: 1
+    renderAsBillboard: 0
+    prefab: {fileID: 0}
+    gpuInstancing: 0
+    holeEdgePadding: 2
+    alignToGround: 100
+    positionJitter: 0
+    useDensityScaling: 1
+    density: 0
+    billboard: {fileID: 0}
+    mainColor: {r: 1, g: 1, b: 1, a: 1}
+    secondaryColor: {r: 1, g: 1, b: 1, a: 1}
+    linkColors: 1
+    minMaxHeight: {x: 0.5, y: 1}
+    minMaxWidth: {x: 0.8, y: 1.2}
+    noiseSize: 0.1
   terrainSettings:
     drawTreesAndFoliage: 1
     preservePrefabLayer: 1
