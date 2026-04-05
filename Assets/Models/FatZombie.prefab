@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 8952234495049333056}
   - component: {fileID: 7820090266829362251}
   m_Layer: 0
-  m_Name: FatZombie 1
+  m_Name: FatZombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
