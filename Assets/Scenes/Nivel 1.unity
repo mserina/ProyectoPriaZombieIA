@@ -989,6 +989,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 624285649}
+--- !u!1001 &544833624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 636.2321
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000005722046
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 544.4777
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 521928779361200495, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 6403b1b2a7946ef4889f4bd2494b2780, type: 3}
+    - target: {fileID: 521928779361200495, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Bind_Root'\n\tTransform 'Bind_LeftHandThumb2'\n\tTransform
+        'Bind_LeftFoot'\n\tTransform 'Bind_LeftToeBase'\n\tTransform 'Bind_LeftUpLeg'\n\tTransform
+        'Bind_LeftShoulder'\n\tTransform 'Bind_LeftHand'\n\tTransform 'Bind_RightLeg'\n\tTransform
+        'Bind_RightToeBase'\n\tTransform 'Bind_LeftForeArm'\n\tand more ...\n\tFrom
+        animation clip 'Pose_Idle'\n\tFrom animation clip 'Pose_to_Walk_F'\n\tFrom
+        animation clip 'Walk_F'\n\tFrom animation clip 'Walk_F'\n\tFrom animation
+        clip 'Walk_F'\n\tFrom animation clip 'Run_F'\n\tFrom animation clip 'Run_F'\n\tFrom
+        animation clip 'Run_F'\n\tFrom animation clip 'Run_F_to_Idle'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 864456537437153145, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
+      propertyPath: m_Name
+      value: ModelFither
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
 --- !u!1 &552314607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 66caa09fe531cb24d86d2d3dc66b284c, type: 3}
@@ -2916,3 +2990,4 @@ SceneRoots:
   - {fileID: 1111758950}
   - {fileID: 1983674344}
   - {fileID: 825771423}
+  - {fileID: 544833624}
