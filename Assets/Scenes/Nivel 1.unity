@@ -654,8 +654,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 569.2, y: 5.1, z: 590.3}
-  m_LocalScale: {x: 8.100804, y: 1, z: 2.038}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5.63, y: 0.6949927, z: 1.4163952}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 1
   m_AgentTypeID: -1372625422
-  m_StartPoint: {x: -8.676636, y: 3.7288966, z: -3.6478271}
+  m_StartPoint: {x: -22.078735, y: 3.7288966, z: -0.62060547}
   m_EndPoint: {x: 0, y: -1.2602468, z: 2.5}
   m_StartTransform: {fileID: 0}
   m_EndTransform: {fileID: 0}
@@ -1588,7 +1588,7 @@ Transform:
   m_GameObject: {fileID: 1106755599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7660445, z: -0, w: -0.6427876}
-  m_LocalPosition: {x: 8.009155, y: 12.029282, z: 1.546875}
+  m_LocalPosition: {x: 15.69, y: 12.029282, z: 0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
