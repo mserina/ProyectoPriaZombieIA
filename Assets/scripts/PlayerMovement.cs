@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
+    
     [Header("Movimiento")]
     public float speed = 5f;
     public float jumpForce = 5f;

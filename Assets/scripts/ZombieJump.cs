@@ -4,37 +4,32 @@ using UnityEngine.AI;
 
 public class ZombieJump : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public Animator animator;
+    public string playerTag = "Player";
+
+    private bool isAttacking = false;
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.autoTraverseOffMeshLink = false; // para controlar tú el salto
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        if (agent.isOnOffMeshLink)
+        if (other.CompareTag(playerTag))
         {
-            StartCoroutine(Jump(agent.currentOffMeshLinkData));
+            isAttacking = true;
+            animator.SetBool("isAttacking", true);
         }
     }
 
-    IEnumerator Jump(OffMeshLinkData link)
+    void OnTriggerExit(Collider other)
     {
-        Vector3 startPos = agent.transform.position;
-        Vector3 endPos = link.endPos + Vector3.up * agent.baseOffset;
-
-        float duration = 0.5f;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
+        if (other.CompareTag(playerTag))
         {
-            agent.transform.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
+            isAttacking = false;
+            animator.SetBool("isAttacking", false);
         }
-
-        agent.CompleteOffMeshLink(); // marca como completado
     }
 }
