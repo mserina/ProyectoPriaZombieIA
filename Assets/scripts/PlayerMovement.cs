@@ -153,12 +153,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
-        if (attackPoint == null) return;
+        if (attackPoint == null)
+        {
+            Debug.Log("attackPoint es null");
+            return;
+        }
 
         Collider[] hits = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
+        Debug.Log($"Hits detectados: {hits.Length}");
 
         foreach (Collider hit in hits)
         {
+            Debug.Log($"Hit: {hit.gameObject.name}");
             ZombieJump zj = hit.GetComponentInParent<ZombieJump>();
             if (zj != null)
             {

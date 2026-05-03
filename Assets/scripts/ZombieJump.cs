@@ -38,7 +38,6 @@ public class ZombieJump : MonoBehaviour
     void Update()
     {
         animator.SetBool("isAttacking", isAttacking);
-        agent.isStopped = isAttacking;
 
         if (agent.isOnOffMeshLink && !isJumping)
         {
@@ -74,35 +73,33 @@ public class ZombieJump : MonoBehaviour
         if (other.CompareTag("Player") && canAttack)
         {
             player = other.transform;
+            agent.isStopped = true; // 👈 para inmediatamente al detectar al jugador
             StartCoroutine(AttackRoutine());
         }
     }
-
     IEnumerator AttackRoutine()
     {
         canAttack = false;
         isAttacking = true;
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero; // 👈 para la inercia
+        agent.ResetPath(); // 👈 cancela el path actual
+        animator.Play("Ataque");
 
         playerRef = player;
         PushPlayer();
 
-        // Esperamos hasta el momento del golpe
         yield return new WaitForSeconds(attackCooldown * 0.5f);
 
-        // Aplicamos daño solo si el jugador sigue cerca
         if (playerRef != null)
         {
-            float distancia = Vector3.Distance(transform.position, playerRef.position);
-
-            if (distancia < 2f)
-            {
-                DealDamage();
-            }
+            DealDamage();
         }
 
         yield return new WaitForSeconds(attackCooldown * 0.5f);
 
         isAttacking = false;
+        agent.isStopped = false;
 
         yield return new WaitForSeconds(0.2f);
         canAttack = true;
@@ -140,6 +137,21 @@ public class ZombieJump : MonoBehaviour
 
     public void TakeHit()
     {
+        StartCoroutine(MuerteRoutine());
+    }
+
+    IEnumerator MuerteRoutine()
+    {
+        canAttack = false;
+        isAttacking = false;
+        agent.isStopped = true;
+        agent.enabled = false;
+        GetComponent<Collider>().enabled = false;
+
+        animator.Play("Muerte2");
+
+        yield return new WaitForSeconds(2.2f);
+
         Destroy(gameObject);
     }
 

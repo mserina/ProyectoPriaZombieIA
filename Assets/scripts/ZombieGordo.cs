@@ -15,6 +15,7 @@ public class ZombieGordo : MonoBehaviour
     private bool canAttack = true;
 
     private Transform player;
+    private Transform playerRef;
 
     [Header("Ataque")]
     public float attackCooldown = 2f;
@@ -78,6 +79,7 @@ public class ZombieGordo : MonoBehaviour
     {
         if (other.CompareTag("Player") && canAttack)
         {
+            Debug.Log("Iniciando ataque");
             player = other.transform;
             StartCoroutine(AttackRoutine());
         }
@@ -88,20 +90,36 @@ public class ZombieGordo : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
+        animator.Play("Ataque");
+
+        playerRef = player;
         PushPlayer();
 
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(attackCooldown * 0.5f);
 
-        PlayerMovement pm = player.GetComponent<PlayerMovement>();
-        if (pm != null && !pm.HasWeapon)
+        if (playerRef != null)
         {
-            GameManager.Instance.TakeDamage(1);
+            DealDamage();
         }
+
+        yield return new WaitForSeconds(attackCooldown * 0.5f);
 
         isAttacking = false;
 
         yield return new WaitForSeconds(0.2f);
         canAttack = true;
+    }
+
+    public void DealDamage()
+    {
+        if (playerRef == null) return;
+
+        PlayerMovement pm = playerRef.GetComponent<PlayerMovement>();
+
+        if (pm != null && !pm.HasWeapon)
+        {
+            GameManager.Instance.TakeDamage(1);
+        }
     }
 
     void PushPlayer()
@@ -128,8 +146,20 @@ public class ZombieGordo : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(MuerteRoutine());
         }
+    }
+
+    IEnumerator MuerteRoutine()
+    {
+        agent.isStopped = true;
+        GetComponent<Collider>().enabled = false;
+
+        animator.Play("Muerte");
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(gameObject);
     }
 
     private void OnTriggerExit(Collider other)
