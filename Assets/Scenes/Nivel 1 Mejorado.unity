@@ -1211,7 +1211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2059406237}
-  agent: {fileID: 0}
 --- !u!136 &509292898
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1274,14 +1273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27758ddbcd131e4cbd3d6cdc0d2af87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
-  isAttacking: 0
-  isJumping: 0
-  canAttack: 1
-  player: {fileID: 0}
-  playerRef: {fileID: 0}
   attackCooldown: 2.15
   pushForce: 11.8
 --- !u!1001 &544833624
@@ -1306,15 +1297,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -390.5878
+      value: -481
       objectReference: {fileID: 0}
     - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2314587
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 819.8371
+      value: 799
       objectReference: {fileID: 0}
     - target: {fileID: 50940410742504899, guid: 5af7490bec2b5f8448c412d72f251fd5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1439,22 +1430,17 @@ MonoBehaviour:
   jumpForce: 25
   coyoteTime: 0.15
   jumpBufferTime: 0.15
-  coyoteTimer: 0
-  jumpBufferTimer: 0
-  isJumping: 0
-  jumpCooldown: 0
   groundCheck: {fileID: 0}
   groundRadius: 0.3
   groundLayer:
+    serializedVersion: 2
     m_Bits: 1
   weaponInHand: {fileID: 0}
-  hasWeapon: 0
   attackPoint: {fileID: 0}
   attackRange: 2
   enemyLayer:
+    serializedVersion: 2
     m_Bits: 0
-  rb: {fileID: 0}
-  animator: {fileID: 0}
   fallMultiplier: 3
   lowJumpMultiplier: 3
 --- !u!54 &624285645
@@ -1901,7 +1887,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2570,15 +2557,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c71db91df314ad2499483b4914350604, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163
+      value: 208.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c71db91df314ad2499483b4914350604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39
+      value: 19.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c71db91df314ad2499483b4914350604, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1094
+      value: 1102.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c71db91df314ad2499483b4914350604, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3997,7 +3984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2059406237}
-  agent: {fileID: 0}
 --- !u!54 &1529581161
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4037,18 +4023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a715ce3a9b0de524a98b64351fbc4853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  animator: {fileID: 0}
-  rb: {fileID: 0}
-  isAttacking: 0
-  isJumping: 0
-  canAttack: 1
-  player: {fileID: 0}
-  playerRef: {fileID: 0}
   attackCooldown: 2
   pushForce: 9.7
   speed: 2
-  health: 2
 --- !u!136 &1529581163
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5491,22 +5468,17 @@ MonoBehaviour:
   jumpForce: 25
   coyoteTime: 0.15
   jumpBufferTime: 0.15
-  coyoteTimer: 0
-  jumpBufferTimer: 0
-  isJumping: 0
-  jumpCooldown: 0
   groundCheck: {fileID: 1532911691}
   groundRadius: 0.3
   groundLayer:
+    serializedVersion: 2
     m_Bits: 1
   weaponInHand: {fileID: 0}
-  hasWeapon: 0
   attackPoint: {fileID: 1523644258}
   attackRange: 2
   enemyLayer:
+    serializedVersion: 2
     m_Bits: 1
-  rb: {fileID: 0}
-  animator: {fileID: 0}
   fallMultiplier: 3
   lowJumpMultiplier: 3
 --- !u!54 &2059406234
