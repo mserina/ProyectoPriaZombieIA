@@ -204,7 +204,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8903058273634951509}
   - component: {fileID: 6757531004235149912}
+<<<<<<< HEAD
   - component: {fileID: 6042499465095020118}
+=======
+>>>>>>> Maiki
   m_Layer: 0
   m_Name: Grass_01
   m_TagString: Untagged
@@ -222,7 +225,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalScale: {x: 27.49804, y: 27.49804, z: 27.49804}
+>>>>>>> Maiki
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8927922121296990005}
@@ -252,6 +259,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3720084168579074821}
   m_Enabled: 1
+<<<<<<< HEAD
 --- !u!136 &6042499465095020118
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -275,3 +283,5 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Maiki

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.vegetationspawner.runtime", "sc.vegetationspawner.runtime.csproj", "{c89574d7-162a-5b45-82ad-dcaf12788c04}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{51dc69f0-e42c-c7d8-71b7-9a590a206f2a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.vegetationspawner.runtime", "sc.vegetationspawner.runtime.csproj", "{c89574d7-162a-5b45-82ad-dcaf12788c04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{58a3f628-fb24-a55d-3e37-153ffb3fcd73}"
 EndProject
@@ -14,10 +14,10 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{c89574d7-162a-5b45-82ad-dcaf12788c04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{c89574d7-162a-5b45-82ad-dcaf12788c04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51dc69f0-e42c-c7d8-71b7-9a590a206f2a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51dc69f0-e42c-c7d8-71b7-9a590a206f2a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c89574d7-162a-5b45-82ad-dcaf12788c04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c89574d7-162a-5b45-82ad-dcaf12788c04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58a3f628-fb24-a55d-3e37-153ffb3fcd73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58a3f628-fb24-a55d-3e37-153ffb3fcd73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d7271866-6895-970a-512c-b1ac3c1a013a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

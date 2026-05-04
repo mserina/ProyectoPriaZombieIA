@@ -29,6 +29,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: mixamo.com
@@ -59,6 +60,9 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+=======
+    clipAnimations: []
+>>>>>>> Maiki
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -108,6 +112,7 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
+<<<<<<< HEAD
     human:
     - boneName: Zombie_Hips
       humanName: Hips
@@ -841,6 +846,10 @@ ModelImporter:
       position: {x: -0, y: 0.062623, z: -0.129548}
       rotation: {x: 0.000025307274, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+=======
+    human: []
+    skeleton: []
+>>>>>>> Maiki
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
