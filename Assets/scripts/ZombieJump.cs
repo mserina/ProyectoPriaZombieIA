@@ -13,6 +13,7 @@ public class ZombieJump : MonoBehaviour
     private bool isAttacking = false;
     private bool isJumping = false;
     private bool canAttack = true;
+    private bool isStunned = false;
 
     private Transform player;
     private Transform playerRef;
@@ -39,7 +40,13 @@ public class ZombieJump : MonoBehaviour
     {
         animator.SetBool("isAttacking", isAttacking);
 
-        if (agent.isOnOffMeshLink && !isJumping)
+        if (isStunned)
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
+
+        if (agent.isOnOffMeshLink && !isJumping && !isStunned)
         {
             StartCoroutine(Jump(agent.currentOffMeshLinkData));
         }
@@ -70,20 +77,22 @@ public class ZombieJump : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && canAttack)
+        if (other.CompareTag("Player") && canAttack && !isStunned)
         {
             player = other.transform;
-            agent.isStopped = true; // 👈 para inmediatamente al detectar al jugador
+            agent.isStopped = true;
             StartCoroutine(AttackRoutine());
         }
     }
+
     IEnumerator AttackRoutine()
     {
         canAttack = false;
         isAttacking = true;
         agent.isStopped = true;
-        agent.velocity = Vector3.zero; // 👈 para la inercia
-        agent.ResetPath(); // 👈 cancela el path actual
+        agent.velocity = Vector3.zero;
+        agent.ResetPath();
+
         animator.Play("Ataque");
 
         playerRef = player;
@@ -133,6 +142,35 @@ public class ZombieJump : MonoBehaviour
 
         playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, 0f, playerRb.linearVelocity.z);
         playerRb.AddForce(force, ForceMode.Impulse);
+    }
+
+    public void Stun(float duracion)
+    {
+        if (!gameObject.activeInHierarchy)
+        {
+            Debug.Log("Zombie inactivo, no se puede stunear");
+            return;
+        }
+        Debug.Log("Iniciando stun en ZombieJump");
+        StartCoroutine(StunRoutine(duracion));
+    }
+
+    IEnumerator StunRoutine(float duracion)
+    {
+        Debug.Log("StunRoutine iniciado");
+        isStunned = true;
+        canAttack = false;
+        isAttacking = false;
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        agent.ResetPath();
+
+        yield return new WaitForSeconds(duracion);
+
+        Debug.Log("StunRoutine terminado");
+        isStunned = false;
+        canAttack = true;
+        agent.isStopped = false;
     }
 
     public void TakeHit()

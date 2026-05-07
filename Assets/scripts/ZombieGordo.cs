@@ -13,6 +13,7 @@ public class ZombieGordo : MonoBehaviour
     private bool isAttacking = false;
     private bool isJumping = false;
     private bool canAttack = true;
+    private bool isStunned = false;
 
     private Transform player;
     private Transform playerRef;
@@ -43,10 +44,17 @@ public class ZombieGordo : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("isAttacking", isAttacking);
-        agent.isStopped = isAttacking;
+        Debug.Log($"isStunned: {isStunned} | isStopped: {agent.isStopped}");
 
-        if (agent.isOnOffMeshLink && !isJumping)
+        animator.SetBool("isAttacking", isAttacking);
+
+        if (isStunned)
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
+
+        if (agent.isOnOffMeshLink && !isJumping && !isStunned)
         {
             StartCoroutine(Jump(agent.currentOffMeshLinkData));
         }
@@ -77,9 +85,8 @@ public class ZombieGordo : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && canAttack)
+        if (other.CompareTag("Player") && canAttack && !isStunned)
         {
-            Debug.Log("Iniciando ataque");
             player = other.transform;
             StartCoroutine(AttackRoutine());
         }
@@ -140,6 +147,29 @@ public class ZombieGordo : MonoBehaviour
         playerRb.AddForce(force, ForceMode.Impulse);
     }
 
+    public void Stun(float duracion)
+    {
+        Debug.Log($"Stun llamado en {gameObject.name} durante {duracion} segundos");
+
+        StartCoroutine(StunRoutine(duracion));
+    }
+
+    IEnumerator StunRoutine(float duracion)
+    {
+        isStunned = true;
+        canAttack = false;
+        isAttacking = false;
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        agent.ResetPath();
+
+        yield return new WaitForSeconds(duracion);
+
+        isStunned = false;
+        canAttack = true;
+        agent.isStopped = false;
+    }
+
     public void TakeHit()
     {
         health--;
@@ -152,7 +182,10 @@ public class ZombieGordo : MonoBehaviour
 
     IEnumerator MuerteRoutine()
     {
+        canAttack = false;
+        isAttacking = false;
         agent.isStopped = true;
+        agent.enabled = false;
         GetComponent<Collider>().enabled = false;
 
         animator.Play("Muerte");
