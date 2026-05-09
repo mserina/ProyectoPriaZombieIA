@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a724af62-e467-48a4-b07c-1b105d9b8394" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sc.vegetationspawner.editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/sc.vegetationspawner.editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sc.vegetationspawner.runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/sc.vegetationspawner.runtime.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie/Correr.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie/Correr.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie/ZombieController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie/ZombieController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 1 Mejorado.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 1 Mejorado.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrenoNivel3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/TerrenoNivel3.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,27 +23,27 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e1fa89d1f997/Runtime/Data/PostProcessData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3DIb9CKAkN70OEzmQCbCnhsB7G6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.58f2\Editor\Unity.exe" />
@@ -90,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777972380782</updated>
       <workItem from="1777972390193" duration="368000" />
+      <workItem from="1778267230441" duration="1188000" />
     </task>
     <servers />
   </component>
