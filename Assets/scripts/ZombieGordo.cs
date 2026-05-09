@@ -44,7 +44,11 @@ public class ZombieGordo : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"isStunned: {isStunned} | isStopped: {agent.isStopped}");
+        if (agent.velocity.sqrMagnitude > 0.1f && !isStunned)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(agent.velocity.normalized);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15f);
+        }
 
         animator.SetBool("isAttacking", isAttacking);
 

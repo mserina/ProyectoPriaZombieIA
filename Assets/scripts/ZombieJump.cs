@@ -50,6 +50,13 @@ public class ZombieJump : MonoBehaviour
         {
             StartCoroutine(Jump(agent.currentOffMeshLinkData));
         }
+
+        // Rotación suave hacia el jugador
+        if (agent.velocity.sqrMagnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(agent.velocity.normalized);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+        }
     }
 
     IEnumerator Jump(OffMeshLinkData link)

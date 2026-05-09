@@ -11,7 +11,7 @@ public class Bomb : MonoBehaviour
     void Update()
     {
         // Gira como coleccionable
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(new Vector3(0, rotationSpeed, rotationSpeed * 0.5f) * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
