@@ -197,6 +197,8 @@ public class ZombieJump : MonoBehaviour
 
         yield return new WaitForSeconds(2.2f);
 
+        gameObject.SetActive(false);
+        GameManager.Instance.CheckWinCondition();
         Destroy(gameObject);
     }
 

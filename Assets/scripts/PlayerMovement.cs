@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTimer;
     private float jumpBufferTimer;
     private bool isJumping = false;
-    private float jumpCooldown = 0f;
+    private float jumpCooldown = 0.3f;
 
     [Header("Suelo")]
     public Transform groundCheck;
@@ -60,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // PAUSA
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            GameManager.Instance.TogglePause();
+        // Bloquea el resto del input si está pausado
+        if (Time.timeScale == 0f) return;
+        
+        
         // ROTACIÓN RATÓN (SOLO EJE X)
         float mouseX = Mouse.current.delta.ReadValue().x * mouseSensitivity;
         transform.Rotate(Vector3.up * mouseX);
@@ -109,6 +116,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Time.timeScale == 0f) return;
+        
         Vector2 moveInput = Vector2.zero;
 
         if (Keyboard.current.wKey.isPressed) moveInput.y += 1;

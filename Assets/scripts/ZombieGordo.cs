@@ -195,7 +195,9 @@ public class ZombieGordo : MonoBehaviour
         animator.Play("Muerte");
 
         yield return new WaitForSeconds(2f);
-
+        
+        gameObject.SetActive(false);
+        GameManager.Instance.CheckWinCondition();
         Destroy(gameObject);
     }
 
