@@ -93,10 +93,12 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameEnded = true;
-        Cursor.lockState = CursorLockMode.None; // libera el cursor
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene("GameOver");
-        Debug.Log("GAME OVER");
-        // aquí puedes pausar juego, reiniciar escena, etc.
+
+        string escenaActual = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("GameOver " + escenaActual);
+
+        Debug.Log("GAME OVER - escena: " + escenaActual);
     }
 }
