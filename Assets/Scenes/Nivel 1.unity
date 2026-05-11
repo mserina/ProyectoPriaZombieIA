@@ -3036,9 +3036,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: JugadorFinal 1
       objectReference: {fileID: 0}
+    - target: {fileID: 887719766645168938, guid: 82006780de6735f4997794480fa59e1c, type: 3}
+      propertyPath: fallLimit
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194
+      value: 469
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3046,23 +3050,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 933
+      value: 1280
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.57769936
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.81624967
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3070,7 +3074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -109.422
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4092,7 +4096,7 @@ GameObject:
   - component: {fileID: 2004828766}
   - component: {fileID: 2004828770}
   m_Layer: 4
-  m_Name: Plane
+  m_Name: Agua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4113,11 +4117,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2004828767

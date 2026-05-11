@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         // aquí puedes cargar escena de victoria, mostrar UI, etc.
     }
 
-    void GameOver()
+    public void GameOver()
     {
         gameEnded = true;
         Cursor.lockState = CursorLockMode.None; // libera el cursor

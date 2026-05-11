@@ -43,6 +43,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Gravedad")]
     public float fallMultiplier = 4f;
     public float lowJumpMultiplier = 2f;
+    
+    [Header("Límite del mapa")]
+    public float fallLimit = -25f;
+    
 
     void Start()
     {
@@ -112,6 +116,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("attack");
             Attack();
         }
+        
+        // CAÍDA FUERA DEL MAPA
+        if (transform.position.y < fallLimit)
+            GameManager.Instance.GameOver();
     }
 
     void FixedUpdate()
