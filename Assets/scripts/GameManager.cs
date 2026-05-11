@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public int maxLives = 5;
     public int currentLives;
 
-    [Header("UI")]
-    public Slider lifeSlider;
+    [Header("UI Corazones")]
+    public RawImage[] corazones; // arrastra aquí los 5 corazones en orden
 
     private bool gameEnded = false;
 
@@ -24,9 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentLives = maxLives;
-
-        lifeSlider.maxValue = maxLives;
-        lifeSlider.value = currentLives;
+        ActualizarCorazones();
     }
 
     public void TakeDamage(int damage)
@@ -35,17 +33,24 @@ public class GameManager : MonoBehaviour
 
         currentLives -= damage;
         currentLives = Mathf.Clamp(currentLives, 0, maxLives);
-        lifeSlider.value = currentLives;
+        ActualizarCorazones();
 
         if (currentLives <= 0)
             GameOver();
+    }
+
+    void ActualizarCorazones()
+    {
+        for (int i = 0; i < corazones.Length; i++)
+        {
+            corazones[i].enabled = i < currentLives;
+        }
     }
 
     public void CheckWinCondition()
     {
         if (gameEnded) return;
 
-        // Busca todos los enemigos activos en escena
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (enemies.Length == 0)
@@ -71,23 +76,19 @@ public class GameManager : MonoBehaviour
     void Win()
     {
         gameEnded = true;
-        Cursor.lockState = CursorLockMode.None; // libera el cursor
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
-        
-        Debug.Log("Escena " +  currentScene);
 
-        
-        if (currentScene == 1)       // Nivel 1
-            SceneManager.LoadScene(3); // Ganar Nivel 1
-        else if (currentScene == 4)  // Nivel 2
-            SceneManager.LoadScene(6); // Ganar Nivel 2
-        else if (currentScene == 5)  //Nivel 3
-            SceneManager.LoadScene(7); //Victoria
-        
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentScene == 1)
+            SceneManager.LoadScene(3);
+        else if (currentScene == 4)
+            SceneManager.LoadScene(6);
+        else if (currentScene == 5)
+            SceneManager.LoadScene(7);
+
         Debug.Log("¡HAS GANADO!");
-        // aquí puedes cargar escena de victoria, mostrar UI, etc.
     }
 
     public void GameOver()

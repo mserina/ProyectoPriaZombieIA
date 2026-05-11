@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a724af62-e467-48a4-b07c-1b105d9b8394" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArtStore3D/Fat Zombie(Low Poly)/Demo_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtStore3D/Fat Zombie(Low Poly)/Demo_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArtStore3D/Zombie/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtStore3D/Zombie/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Handpainted_Grass_and_Ground_Textures/Demo/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Handpainted_Grass_and_Ground_Textures/Demo/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ButtonsCanva.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ButtonsCanva.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
