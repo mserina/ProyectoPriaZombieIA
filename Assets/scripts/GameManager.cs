@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("UI Pausa")]
+    public GameObject pauseCanvas;
+    
     [Header("Vida")]
     public int maxLives = 5;
     public int currentLives;
@@ -64,11 +67,13 @@ public class GameManager : MonoBehaviour
         if (Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
+            if (pauseCanvas != null) pauseCanvas.SetActive(true);
             Debug.Log("JUEGO EN PAUSA");
         }
         else
         {
             Time.timeScale = 1f;
+            if (pauseCanvas != null) pauseCanvas.SetActive(false);
             Debug.Log("JUEGO REANUDADO");
         }
     }
