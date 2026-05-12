@@ -546,14 +546,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieFinalYEAH
       objectReference: {fileID: 0}
-    - target: {fileID: 7609128341789591830, guid: 024f1053bf16ade4aabe2607e7b7c526, type: 3}
-      propertyPath: m_Speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609128341789591830, guid: 024f1053bf16ade4aabe2607e7b7c526, type: 3}
-      propertyPath: m_WalkableMask
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -610,14 +602,6 @@ PrefabInstance:
     - target: {fileID: 5577958274937090606, guid: 478357dc9ff1c0d40bf300023ef48900, type: 3}
       propertyPath: m_Name
       value: FatZombieFinalYEAH
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060166619165491933, guid: 478357dc9ff1c0d40bf300023ef48900, type: 3}
-      propertyPath: m_Speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293498731820811037, guid: 478357dc9ff1c0d40bf300023ef48900, type: 3}
-      propertyPath: speed
-      value: 183.5
       objectReference: {fileID: 0}
     - target: {fileID: 8301244661394148837, guid: 478357dc9ff1c0d40bf300023ef48900, type: 3}
       propertyPath: player
@@ -1213,7 +1197,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.33666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4ad7b67521032894bb747dabda335e22, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: bf1ab283c1cd68a47b97dc20a9bd2a03, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1369284466
 Transform:
@@ -3301,7 +3285,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.21666665
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b527b348ceb2f7340a5ba1aba94059d1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 61df9b7a254c1ba43a429fa28df0b6f5, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1811188533
 Transform:
@@ -3330,13 +3314,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: JugadorFinal 1
       objectReference: {fileID: 0}
-    - target: {fileID: 887719766645168938, guid: 82006780de6735f4997794480fa59e1c, type: 3}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2119
+      value: 1354
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3344,7 +3324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1371
+      value: 1208
       objectReference: {fileID: 0}
     - target: {fileID: 1095044466983472319, guid: 82006780de6735f4997794480fa59e1c, type: 3}
       propertyPath: m_LocalRotation.w

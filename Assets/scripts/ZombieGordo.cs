@@ -6,6 +6,12 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class ZombieGordo : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+    public AudioClip deathSound;
+
+    
     private NavMeshAgent agent;
     private Animator animator;
     private Rigidbody rb;
@@ -127,9 +133,12 @@ public class ZombieGordo : MonoBehaviour
 
         PlayerMovement pm = playerRef.GetComponent<PlayerMovement>();
 
-        if (pm != null && !pm.HasWeapon)
+        if (pm != null)
         {
             GameManager.Instance.TakeDamage(1);
+            
+            if (audioSource != null && hitSound != null)
+                audioSource.PlayOneShot(hitSound);
         }
     }
 
@@ -194,10 +203,16 @@ public class ZombieGordo : MonoBehaviour
 
         animator.Play("Muerte");
 
+        if (audioSource != null && hitSound != null)
+            audioSource.PlayOneShot(deathSound);
+        
         yield return new WaitForSeconds(2f);
         
         gameObject.SetActive(false);
         GameManager.Instance.CheckWinCondition();
+        
+        
+        
         Destroy(gameObject);
     }
 

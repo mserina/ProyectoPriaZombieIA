@@ -6,8 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a724af62-e467-48a4-b07c-1b105d9b8394" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProyectoPriaZombieIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FatZombieFinalYEAH.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/FatZombieFinalYEAH.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/JugadorFinal 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/JugadorFinal 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Toy_Bell.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Toy_Bell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/ZombieFinalYEAH.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/ZombieFinalYEAH.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ganar Nivel 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ganar Nivel 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ganar Nivel 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ganar Nivel 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2/NavMesh-NavMesh Surface FatZombie.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2/NavMesh-NavMesh Surface FatZombie.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2/NavMesh-NavMesh Surface ZombieJump.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.2/NavMesh-NavMesh Surface ZombieJump.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nivel 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ZombieGordo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ZombieGordo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ZombieJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ZombieJump.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +104,7 @@
       <workItem from="1777972390193" duration="368000" />
       <workItem from="1778267230441" duration="1188000" />
       <workItem from="1778354998175" duration="7241000" />
+      <workItem from="1778574864216" duration="4734000" />
     </task>
     <servers />
   </component>

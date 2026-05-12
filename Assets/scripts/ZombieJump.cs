@@ -6,6 +6,11 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class ZombieJump : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+    public AudioClip deathSound;
+    
     private NavMeshAgent agent;
     private Animator animator;
     private Rigidbody rb;
@@ -21,6 +26,8 @@ public class ZombieJump : MonoBehaviour
     [Header("Ataque")]
     public float attackCooldown = 1f;
     public float pushForce = 8f;
+    
+    
 
     void Start()
     {
@@ -127,9 +134,12 @@ public class ZombieJump : MonoBehaviour
 
         PlayerMovement pm = playerRef.GetComponent<PlayerMovement>();
 
-        if (pm != null && !pm.HasWeapon)
+        if (pm != null)
         {
             GameManager.Instance.TakeDamage(1);
+            
+            if (audioSource != null && hitSound != null)
+                audioSource.PlayOneShot(hitSound);
         }
     }
 
@@ -195,10 +205,16 @@ public class ZombieJump : MonoBehaviour
 
         animator.Play("Muerte2");
 
+        if (audioSource != null && hitSound != null)
+            audioSource.PlayOneShot(deathSound);
+        
         yield return new WaitForSeconds(2.2f);
 
         gameObject.SetActive(false);
         GameManager.Instance.CheckWinCondition();
+        
+        
+        
         Destroy(gameObject);
     }
 

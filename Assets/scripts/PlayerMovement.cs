@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTimer;
     private float jumpBufferTimer;
     private bool isJumping = false;
-    private float jumpCooldown = 0.3f;
 
     [Header("Suelo")]
     public Transform groundCheck;
@@ -89,11 +88,7 @@ public class PlayerMovement : MonoBehaviour
         bool grounded = IsGrounded();
         animator.SetBool("isGrounded", grounded);
 
-        // Cooldown del salto
-        jumpCooldown -= Time.deltaTime;
-
-        // Resetea isJumping al aterrizar
-        if (grounded && rb.linearVelocity.y <= 0.1f && jumpCooldown <= 0f)
+        if (grounded && rb.linearVelocity.y <= 0.1f)
             isJumping = false;
 
         // COYOTE TIME
@@ -153,8 +148,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
         }
-        else if (rb.linearVelocity.y > 0 && !Keyboard.current.spaceKey.isPressed)
+        else if (rb.linearVelocity.y > 0)
         {
+            // aplica siempre, independiente de si espacio está pulsado
             rb.linearVelocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
@@ -165,7 +161,6 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         animator.SetTrigger("jump");
         isJumping = true;
-        jumpCooldown = 3f;
     }
 
     void Attack()

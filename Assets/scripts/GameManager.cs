@@ -102,4 +102,11 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("GAME OVER - escena: " + escenaActual);
     }
+    
+    public void Heal(int amount)
+    {
+        currentLives += amount;
+        currentLives = Mathf.Clamp(currentLives, 0, maxLives);
+        ActualizarCorazones();
+    }
 }
